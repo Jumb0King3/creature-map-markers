@@ -1,0 +1,17 @@
+{
+  "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+  "type": "code",
+  "modid": "creaturemarkers",
+  "name": "Creature Map Markers",
+  "authors": [
+    "Jumboking3"
+  ],
+  "description": "Shows every loaded creature on the world map and minimap, live: monsters, predators, animals, pets, traders and villagers, each with its own colour, shape and layer toggle, plus health. Search for creatures, click one to track it or Shift+click to drop a waypoint. Settings window: .creaturemarkers",
+  "version": "1.4.1",
+  "side": "Universal",
+  "requiredOnClient": true,
+  "requiredOnServer": true,
+  "dependencies": {
+    "game": "1.22.0"
+  }
+}
