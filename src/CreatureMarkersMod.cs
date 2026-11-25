@@ -627,7 +627,7 @@ namespace CreatureMarkers
             string path = e.Code != null && e.Code.Path != null ? e.Code.Path.ToLowerInvariant() : "";
             string cls = e.GetType().Name;
 
-            if (Matches(path, serverConfig.ExcludeCodes)) return -1;
+            if (Matches(path, ServerConfig.AlwaysExcludedCodes) || Matches(path, serverConfig.ExcludeCodes)) return -1;
             if (Matches(path, serverConfig.MonsterCodes)) return CreatureCategory.Monsters;
 
             if (cls.IndexOf("Trader", StringComparison.OrdinalIgnoreCase) >= 0 || path.Contains("trader")) return CreatureCategory.Traders;

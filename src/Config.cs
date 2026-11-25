@@ -57,8 +57,14 @@ namespace CreatureMarkers
         /// <summary>Anything this many blocks or more below the original terrain surface counts as underground.</summary>
         public int UndergroundDepth = 3;
 
-        /// <summary>Creature codes never shown.</summary>
+        /// <summary>
+        /// Creature codes never shown. Vehicles (carts, wagons, boats) are always left out as well,
+        /// whatever this list says; see AlwaysExcludedCodes.
+        /// </summary>
         public string[] ExcludeCodes = { "armorstand", "strawdummy", "mannequin" };
+
+        /// <summary>Never shown, even with an older config file: vehicles and other things that aren't creatures.</summary>
+        public static readonly string[] AlwaysExcludedCodes = { "cart", "handcart", "wagon", "carriage", "boat", "raft", "sled" };
 
         public void Clamp()
         {
